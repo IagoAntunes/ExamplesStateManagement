@@ -38,9 +38,7 @@ class TodoBloc extends Bloc<ITodoBlocEvent, ITodoBlocState> {
           .where((element) => element.title == event.todo.title)
           .first
           .isChecked = event.value;
-      for (var item in state.listTodos) {
-        print("OI -> ${item.title} -> ${item.isChecked}");
-      }
+
       emit(SuccessGetTodoBlocState(listTodos: state.listTodos));
     });
 

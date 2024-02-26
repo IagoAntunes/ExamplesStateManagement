@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:testando_coisas/core/page/default_todo_page.dart';
 import 'package:testando_coisas/feat/cubit/todo/bloc/todo_cubit.dart';
 import 'package:testando_coisas/feat/cubit/todo/state/todo_cubit_state.dart';
 
@@ -8,8 +9,7 @@ class TodoCubitPage extends StatelessWidget {
   final cubit = TodoCubit();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Signal Todo")),
+    return DefaultTodoPage(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
         child: BlocBuilder<TodoCubit, ITodoCubitState>(

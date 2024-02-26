@@ -3,6 +3,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:testando_coisas/feat/cubit/counter/bloc/counter_cubit.dart';
 import 'package:testando_coisas/feat/cubit/counter/state/counter_cubit_state.dart';
 
+import '../../../../core/components/counter_text_component.dart';
+import '../../../../core/page/default_counter_page.dart';
+
 class CounterCubitPage extends StatelessWidget {
   CounterCubitPage({super.key});
 
@@ -10,41 +13,21 @@ class CounterCubitPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16),
-        child: BlocBuilder<CounterCubit, ICounterCubitState>(
-          bloc: bloc,
-          builder: (context, state) {
-            return Center(
-              child: Text(
-                state.count.toString(),
-                style: const TextStyle(
-                  fontSize: 32,
-                ),
-              ),
-            );
-          },
-        ),
+    return DefaultCounterPage(
+      body: BlocBuilder<CounterCubit, ICounterCubitState>(
+        bloc: bloc,
+        builder: (context, state) {
+          return CounterTextComponent(
+            data: bloc.state.count.toString(),
+          );
+        },
       ),
-      floatingActionButton: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FloatingActionButton(
-            onPressed: () {
-              bloc.increment();
-            },
-            child: const Icon(Icons.add),
-          ),
-          const SizedBox(height: 16),
-          FloatingActionButton(
-            onPressed: () {
-              bloc.decrement();
-            },
-            child: const Icon(Icons.remove),
-          ),
-        ],
-      ),
+      increment: () {
+        bloc.increment();
+      },
+      decrement: () {
+        bloc.decrement();
+      },
     );
   }
 }

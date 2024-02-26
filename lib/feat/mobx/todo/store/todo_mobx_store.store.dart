@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:mobx/mobx.dart';
 import 'package:testando_coisas/core/models/todo_model.dart';
 import 'package:testando_coisas/feat/mobx/todo/state/todo_mobx_state.dart';

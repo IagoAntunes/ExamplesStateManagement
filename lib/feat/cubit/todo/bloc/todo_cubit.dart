@@ -10,7 +10,7 @@ class TodoCubit extends Cubit<ITodoCubitState> {
 
   Future<void> getTodos() async {
     emit(LoadingTodoCubitState(list: []));
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     listTodos.addAll([
       TodoModel(title: "Academia", isChecked: false),
       TodoModel(title: "Almoçar", isChecked: false),

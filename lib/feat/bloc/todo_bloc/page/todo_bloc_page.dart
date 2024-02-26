@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:testando_coisas/core/page/default_todo_page.dart';
 import 'package:testando_coisas/feat/bloc/todo_bloc/bloc/todo_bloc.dart';
 import 'package:testando_coisas/feat/bloc/todo_bloc/state/todo_bloc_state.dart';
 
@@ -11,8 +12,7 @@ class TodoBlocPage extends StatelessWidget {
   final bloc = TodoBloc();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text("Signal Todo")),
+    return DefaultTodoPage(
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
         child: Column(

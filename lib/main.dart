@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:testando_coisas/feat/bloc/todo_bloc/page/todo_bloc_page.dart';
-import 'package:testando_coisas/feat/cubit/counter/pages/counter_cubit_page.dart';
-import 'package:testando_coisas/feat/cubit/form/page/form_cubit_page.dart';
-import 'package:testando_coisas/feat/cubit/todo/page/todo_cubit_page.dart';
+
+import 'core/page/all_pages.dart';
 
 void main() {
   runApp(const MyApp());
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       themeMode: ThemeMode.dark,
-      home: TodoCubitPage(),
+      home: const HomePage(),
     );
   }
 }

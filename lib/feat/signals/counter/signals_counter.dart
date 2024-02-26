@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:signals/signals_flutter.dart';
+import 'package:testando_coisas/core/page/default_counter_page.dart';
 
 class CounterSignal extends StatelessWidget {
   CounterSignal({super.key});
@@ -9,21 +10,16 @@ class CounterSignal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text("Signal Counter"),
-      ),
+    return DefaultCounterPage(
       body: Center(
         child: Text("${doubleCounter.watch(context)}"),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          counter.value++;
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ),
+      increment: () {
+        counter.value++;
+      },
+      decrement: () {
+        counter.value--;
+      },
     );
   }
 }

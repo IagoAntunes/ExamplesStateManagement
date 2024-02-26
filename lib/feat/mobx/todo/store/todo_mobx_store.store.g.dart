@@ -90,6 +90,17 @@ mixin _$TodoMobxStore on _TodoMobxStore, Store {
   }
 
   @override
+  void addTodo(String title) {
+    final _$actionInfo = _$_TodoMobxStoreActionController.startAction(
+        name: '_TodoMobxStore.addTodo');
+    try {
+      return super.addTodo(title);
+    } finally {
+      _$_TodoMobxStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
 listTodos: ${listTodos},
