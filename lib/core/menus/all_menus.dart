@@ -1,6 +1,9 @@
 import 'package:testando_coisas/feat/bloc/counter_bloc/pages/counter_bloc_page.dart';
 import 'package:testando_coisas/feat/bloc/form_bloc/pages/form_bloc_page.dart';
 import 'package:testando_coisas/feat/bloc/todo_bloc/page/todo_bloc_page.dart';
+import 'package:testando_coisas/feat/changenotifier/counter/pages/counter_changenotifier_page.dart';
+import 'package:testando_coisas/feat/changenotifier/form/page/form_changenotifier_page.dart';
+import 'package:testando_coisas/feat/changenotifier/todo/page/todo_changenotifier_page.dart';
 import 'package:testando_coisas/feat/cubit/counter/pages/counter_cubit_page.dart';
 import 'package:testando_coisas/feat/cubit/form/page/form_cubit_page.dart';
 import 'package:testando_coisas/feat/cubit/todo/page/todo_cubit_page.dart';
@@ -45,6 +48,14 @@ class AppMenus {
         PageModel(page: CounterSignal(), title: "Counter"),
         PageModel(page: FormSignals(), title: "Form"),
         // PageModel(page: TodoSignal(), title: "Todo"),
+      ],
+    ),
+    GroupPageModel(
+      title: "ChangeNotifier",
+      list: [
+        PageModel(page: CounterChangeNotifierPage(), title: "Counter"),
+        PageModel(page: FormChangeNotifierPage(), title: "Form"),
+        PageModel(page: TodoChangeNotifierPage(), title: "Todo"),
       ],
     ),
   ];
