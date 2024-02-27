@@ -7,6 +7,9 @@ import 'package:testando_coisas/feat/changenotifier/todo/page/todo_changenotifie
 import 'package:testando_coisas/feat/cubit/counter/pages/counter_cubit_page.dart';
 import 'package:testando_coisas/feat/cubit/form/page/form_cubit_page.dart';
 import 'package:testando_coisas/feat/cubit/todo/page/todo_cubit_page.dart';
+import 'package:testando_coisas/feat/getx/counter/page/counter_getx_page.dart';
+import 'package:testando_coisas/feat/getx/form/page/form_getx_page.dart';
+import 'package:testando_coisas/feat/getx/todo/page/todo_getx_page.dart';
 import 'package:testando_coisas/feat/mobx/counter/page/counter_mobx_page.dart';
 import 'package:testando_coisas/feat/mobx/form/page/form_mobx_page.dart';
 import 'package:testando_coisas/feat/mobx/todo/page/todo_mobx_page.dart';
@@ -21,41 +24,49 @@ class AppMenus {
     GroupPageModel(
       title: "Bloc",
       list: [
-        PageModel(page: CounterBlocPage(), title: "Counter"),
-        PageModel(page: FormBlocPage(), title: "Form"),
-        PageModel(page: TodoBlocPage(), title: "Todo"),
+        PageModel(builder: () => CounterBlocPage(), title: "Counter"),
+        PageModel(builder: () => FormBlocPage(), title: "Form"),
+        PageModel(builder: () => TodoBlocPage(), title: "Todo"),
       ],
     ),
     GroupPageModel(
       title: "Cubit",
       list: [
-        PageModel(page: CounterCubitPage(), title: "Counter"),
-        PageModel(page: FormCubitPage(), title: "Form"),
-        PageModel(page: TodoCubitPage(), title: "Todo"),
+        PageModel(builder: () => CounterCubitPage(), title: "Counter"),
+        PageModel(builder: () => FormCubitPage(), title: "Form"),
+        PageModel(builder: () => TodoCubitPage(), title: "Todo"),
       ],
     ),
     GroupPageModel(
       title: "Mobx",
       list: [
-        PageModel(page: CounterMobxPage(), title: "Counter"),
-        PageModel(page: FormMobxPage(), title: "Form"),
-        PageModel(page: TodoMobxPage(), title: "Todo"),
+        PageModel(builder: () => CounterMobxPage(), title: "Counter"),
+        PageModel(builder: () => FormMobxPage(), title: "Form"),
+        PageModel(builder: () => TodoMobxPage(), title: "Todo"),
       ],
     ),
     GroupPageModel(
       title: "Signals",
       list: [
-        PageModel(page: CounterSignal(), title: "Counter"),
-        PageModel(page: FormSignals(), title: "Form"),
-        // PageModel(page: TodoSignal(), title: "Todo"),
+        PageModel(builder: () => CounterSignal(), title: "Counter"),
+        PageModel(builder: () => FormSignals(), title: "Form"),
+        // PageModel(builder:() =>  TodoSignal(), title: "Todo"),
       ],
     ),
     GroupPageModel(
       title: "ChangeNotifier",
       list: [
-        PageModel(page: CounterChangeNotifierPage(), title: "Counter"),
-        PageModel(page: FormChangeNotifierPage(), title: "Form"),
-        PageModel(page: TodoChangeNotifierPage(), title: "Todo"),
+        PageModel(builder: () => CounterChangeNotifierPage(), title: "Counter"),
+        PageModel(builder: () => FormChangeNotifierPage(), title: "Form"),
+        PageModel(builder: () => TodoChangeNotifierPage(), title: "Todo"),
+      ],
+    ),
+    GroupPageModel(
+      title: "GetX",
+      list: [
+        PageModel(builder: () => CounterGetxPage(), title: "Counter"),
+        PageModel(builder: () => FormGetxPage(), title: "Form"),
+        PageModel(builder: () => TodoGetxPage(), title: "Todo"),
       ],
     ),
   ];

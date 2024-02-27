@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class PageModel {
-  Widget page;
+  final Widget Function() builder;
   String title;
   PageModel({
-    required this.page,
+    required this.builder,
     required this.title,
   });
 }
