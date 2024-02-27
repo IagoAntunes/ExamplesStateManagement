@@ -35,6 +35,7 @@ class FormSignals extends StatelessWidget {
       },
     );
     return DefaultFormPage(
+      title: 'Signals',
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

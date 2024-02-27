@@ -12,6 +12,7 @@ class CounterMobxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultCounterPage(
+      title: "Mobx",
       body: Observer(builder: (context) {
         return CounterTextComponent(data: store.count.toString());
       }),

@@ -14,6 +14,7 @@ class CounterCubitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultCounterPage(
+      title: 'Cubit',
       body: BlocBuilder<CounterCubit, ICounterCubitState>(
         bloc: bloc,
         builder: (context, state) {

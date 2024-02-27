@@ -11,6 +11,7 @@ class TodoRiverpodPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return DefaultTodoPage(
+      title: 'Riverpod',
       body: Column(
         children: [
           TextField(

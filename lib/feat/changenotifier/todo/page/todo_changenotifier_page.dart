@@ -9,6 +9,7 @@ class TodoChangeNotifierPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTodoPage(
+      title: 'ChangeNotifier',
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
         child: ListenableBuilder(

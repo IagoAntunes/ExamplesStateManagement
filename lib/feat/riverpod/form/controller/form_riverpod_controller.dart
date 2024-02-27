@@ -11,7 +11,7 @@ class FormRiverpodController extends ValueNotifier<IFormRiverpodState> {
 
   Future<void> doLogin(String email, String password) async {
     value = LoadingFormRiverpodState();
-    await Future.delayed(Duration(seconds: 3));
+    await Future.delayed(const Duration(seconds: 3));
     if (email.isNotEmpty && password.isNotEmpty) {
       value = LoggedFormRiverpodState();
     } else {

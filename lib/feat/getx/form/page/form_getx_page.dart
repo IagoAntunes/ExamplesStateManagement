@@ -16,6 +16,7 @@ class FormGetxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultFormPage(
+      title: 'GetX',
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

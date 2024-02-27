@@ -9,6 +9,7 @@ class CounterChangeNotifierPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultCounterPage(
+      title: "ChangeNotifier",
       //ListenableBuilder is the widget responsible for listening to notifications issued by "[ChangeNotifier]"
       body: ListenableBuilder(
         listenable: controller,

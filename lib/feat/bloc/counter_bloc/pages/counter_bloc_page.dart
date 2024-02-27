@@ -13,6 +13,7 @@ class CounterBlocPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultCounterPage(
+      title: "Bloc",
       body: BlocBuilder<CounterBloc, ICounterBlocState>(
         bloc: bloc,
         builder: (context, state) {

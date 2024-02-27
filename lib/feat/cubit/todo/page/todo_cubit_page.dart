@@ -10,6 +10,7 @@ class TodoCubitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTodoPage(
+      title: 'Cubit',
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
         child: BlocBuilder<TodoCubit, ITodoCubitState>(

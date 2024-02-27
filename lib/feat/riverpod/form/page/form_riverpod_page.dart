@@ -17,6 +17,7 @@ class FormRiverpodPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return DefaultFormPage(
+      title: 'Riverpod',
       child: Observer(
         builder: (context) {
           return Column(

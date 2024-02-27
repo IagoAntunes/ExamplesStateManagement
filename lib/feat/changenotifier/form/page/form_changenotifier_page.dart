@@ -14,6 +14,7 @@ class FormChangeNotifierPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultFormPage(
+      title: 'ChangeNotifier',
       child: ListenableBuilder(
         listenable: controller,
         builder: (context, child) {

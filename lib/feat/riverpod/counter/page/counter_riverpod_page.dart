@@ -11,6 +11,7 @@ class CounterRiverpodPage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return DefaultCounterPage(
+      title: 'Riverpod',
       body: CounterTextComponent(
           data: ref.watch(counterRiverpodProvider).value.toString()),
       increment: () {

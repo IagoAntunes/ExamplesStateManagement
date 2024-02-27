@@ -17,6 +17,7 @@ class FormBlocPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultFormPage(
+      title: 'Bloc',
       child: BlocConsumer<FormBloc, IFormBlocState>(
         listener: (context, state) {
           ScaffoldMessenger.of(context).showSnackBar(

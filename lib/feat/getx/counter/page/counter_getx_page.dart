@@ -11,6 +11,7 @@ class CounterGetxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultCounterPage(
+      title: 'GetX',
       body: Center(
         child: Obx(
           () => Text(controller.count.toString()),

@@ -12,6 +12,7 @@ class TodoMobxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTodoPage(
+      title: 'Mobx',
       body: Observer(builder: (context) {
         return Column(
           children: [

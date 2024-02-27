@@ -15,6 +15,7 @@ class FormCubitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultFormPage(
+      title: 'Cubit',
       child: BlocConsumer<FormCubit, IFormCubitState>(
         listenWhen: (previous, current) => current is IFormCubitListeners,
         listener: (context, state) {

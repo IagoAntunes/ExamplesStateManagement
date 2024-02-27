@@ -13,6 +13,7 @@ class FormMobxPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultFormPage(
+      title: 'Mobx',
       child: Observer(
         builder: (context) {
           return Column(

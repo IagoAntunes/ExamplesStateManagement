@@ -77,7 +77,7 @@ class AppMenus {
       list: [
         PageModel(builder: () => const CounterRiverpodPage(), title: "Counter"),
         PageModel(builder: () => FormRiverpodPage(), title: "Form"),
-        PageModel(builder: () => TodoRiverpodPage(), title: "Todo"),
+        PageModel(builder: () => const TodoRiverpodPage(), title: "Todo"),
       ],
     ),
   ];
