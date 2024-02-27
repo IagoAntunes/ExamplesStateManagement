@@ -13,6 +13,9 @@ import 'package:testando_coisas/feat/getx/todo/page/todo_getx_page.dart';
 import 'package:testando_coisas/feat/mobx/counter/page/counter_mobx_page.dart';
 import 'package:testando_coisas/feat/mobx/form/page/form_mobx_page.dart';
 import 'package:testando_coisas/feat/mobx/todo/page/todo_mobx_page.dart';
+import 'package:testando_coisas/feat/riverpod/counter/page/counter_riverpod_page.dart';
+import 'package:testando_coisas/feat/riverpod/form/page/form_riverpod_page.dart';
+import 'package:testando_coisas/feat/riverpod/todo/page/todo_riverpod_page.dart';
 import 'package:testando_coisas/feat/signals/counter/signals_counter.dart';
 import 'package:testando_coisas/feat/signals/form/signals_form.dart';
 
@@ -67,6 +70,14 @@ class AppMenus {
         PageModel(builder: () => CounterGetxPage(), title: "Counter"),
         PageModel(builder: () => FormGetxPage(), title: "Form"),
         PageModel(builder: () => TodoGetxPage(), title: "Todo"),
+      ],
+    ),
+    GroupPageModel(
+      title: "Riverpod",
+      list: [
+        PageModel(builder: () => const CounterRiverpodPage(), title: "Counter"),
+        PageModel(builder: () => FormRiverpodPage(), title: "Form"),
+        PageModel(builder: () => TodoRiverpodPage(), title: "Todo"),
       ],
     ),
   ];
