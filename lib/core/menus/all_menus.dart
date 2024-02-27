@@ -1,3 +1,6 @@
+import 'package:testando_coisas/core/models/section_model.dart';
+import 'package:testando_coisas/core/page/state_manager_pages.dart';
+import 'package:testando_coisas/feat/database/sqflite/page/list_sqflite_page.dart';
 import 'package:testando_coisas/feat/state_manager/bloc/counter_bloc/pages/counter_bloc_page.dart';
 import 'package:testando_coisas/feat/state_manager/bloc/form_bloc/pages/form_bloc_page.dart';
 import 'package:testando_coisas/feat/state_manager/bloc/todo_bloc/page/todo_bloc_page.dart';
@@ -21,8 +24,29 @@ import 'package:testando_coisas/feat/state_manager/signals/form/signals_form.dar
 
 import '../models/group_page_mode.dart';
 import '../models/page_model.dart';
+import '../page/database_pages.dart';
 
 class AppMenus {
+  static List<SectionModel> listSections = [
+    SectionModel(
+      title: 'State Manager',
+      list: listMenus,
+      builder: () => const StateManagerPage(),
+    ),
+    SectionModel(
+      title: 'Database',
+      list: listDatabase,
+      builder: () => const DatabasePage(),
+    ),
+  ];
+  static List<GroupPageModel> listDatabase = [
+    GroupPageModel(
+      title: "Sqflite",
+      list: [
+        PageModel(builder: () => const ListSqflitePage(), title: "List Todos"),
+      ],
+    ),
+  ];
   static List<GroupPageModel> listMenus = [
     GroupPageModel(
       title: "Bloc",
